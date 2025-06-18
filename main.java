@@ -1,8 +1,13 @@
+import javax.swing.SwingUtilities;
+
 public class main
 {
-    public static void mai n(String[] args)
+    public static void main(String[]args)
     {
-        student s1=new student("Arun");
-        s1.display();
+        SwingUtilities.invokeLater(()->
+        {
+            BankGUI bankApp = new BankGUI();
+            bankApp.setVisible(true);
+        });
     }
 }
